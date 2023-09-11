@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADANG SAWIT PJK</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="main">
+            <h2>LADANG SAWIT PJK</h2>
+                <h2>LOGIN FORM</h2>
+               
+
+            <form id="form_ID" method="post" name="myform">
+                <label> User Name/Email :</label>
+                <input type="text" name="username" id="username"/>
+
+                <label>Password :</label>
+                <input type="password" name="password" id="password"/>
+
+                <label for="showPassword">Show Password:</label>
+                <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
+            </form>
+            <p id="passwordDisplay"></p>
+
+            <script>
+                const passwordInput = document.getElementById("password");
+                const showPasswordCheckbox = document.getElementById("showPassword");
+        
+                showPasswordCheckbox.addEventListener("change", function() {
+                    if (showPasswordCheckbox.checked) {
+                        passwordInput.type = "text";
+                    } else {
+                        passwordInput.type = "password";
+                    }
+                });
+            </script>
+        
+
+            <input type="button" value="Login" id="submit" onclick="validate()"/>
+            <samp>
+                <b class="note">Note : </b>
+                For this demo use following username and password.<br/>
+                <b class="valid">User Name : nobady<br/>
+                Password :1234</b>
+            </samp>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
